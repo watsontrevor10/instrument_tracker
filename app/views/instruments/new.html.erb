@@ -1,0 +1,8 @@
+<h1>Add Instrument</h1>
+<%= form_with(model: @instrument, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Instrument Name" %>
+  </div>
+  <%= f.submit class: "waves-effect waves-light btn blue darken-4" %>
+<% end %>

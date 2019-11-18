@@ -1,0 +1,25 @@
+<nav class="blue lighten-1">
+    <div class="nav-wrapper">
+      <%= link_to 'Instrument Tracker', instruments_path, class: "brand-logo" %>
+      <a href="#" class="brand-logo">Instrument Tracker</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if current_user %>
+          <li>
+            <%= link_to 'Instruments', instruments_path %>
+          </li>
+          <li>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+          </li>       
+        <% else %>
+          <li>
+            <%= link_to "Login", new_user_session_path %>
+          </li>
+          <li>
+            <%= link_to "Register", new_user_registration_path %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
+
